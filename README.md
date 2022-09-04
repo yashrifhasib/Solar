@@ -1,2 +1,3 @@
 # Solar
-This is for the resolving of the bug in the inverter that happened due to changes from cloudiness to sunny.
+## Inverter Throttling Mechanism ##
+This is for the resolving of the bug in the inverter that happened due to changes from cloudiness to sunny. This mainly happens because the inverter operates at high DC voltage when it running in High Efficiency Mode. Therefore, whenever the weather becomes a bit cloudy, the voltage becomes too high for the inverter to handle. As a result, the inverter will get stuck in a groove and not convert solar power into grid power. To snap the inverter out of its groove, this code is built so that the load can force the voltage of the inverter to go down and thus start the conversion again. This code is mainly useful if the inverter voltage is greater than the solar panel voltage. This mechanism is needed to adjust for the change in voltage during cloudy skies.
